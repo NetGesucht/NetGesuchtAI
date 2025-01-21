@@ -1,0 +1,48 @@
+{
+  "function" : {
+    "engine" : "javascript",
+    "parameters" : {
+      "type" : "object",
+      "required" : [
+        "q",
+        "from",
+        "to",
+        "sort"
+      ],
+      "properties" : [
+        {
+          "name" : "q",
+          "definition" : {
+            "type" : "string",
+            "description" : "Target topic "
+          }
+        },
+        {
+          "name" : "from",
+          "definition" : {
+            "type" : "string",
+            "description" : "Date in YYYY-MM-DD format"
+          }
+        },
+        {
+          "definition" : {
+            "type" : "string",
+            "description" : "Date in YYYY-MM-DD format"
+          },
+          "name" : "to"
+        },
+        {
+          "definition" : {
+            "description" : "How to sort it",
+            "type" : "string"
+          },
+          "name" : "sort"
+        }
+      ]
+    },
+    "name" : "getNews",
+    "implementation" : "function replaceSpacesWithPlus(string) {\n  return string.replace(\/ \/g, '+');\n}\n\nasync function getNews(q, from, to, sort) {\n    const apiKey = \"YOUR_KEY_HERE\"\n    const url = `https:\/\/newsapi.org\/v2\/everything?q=${ replaceSpacesWithPlus(q)}&from=${from}&to=${to}&sortBy=${sort}&apiKey=${apiKey}`;\n\n    try {\nconsole.log(url)\n        const response = await http.get(url);\n        console.log(\"Page Content Retrieved Successfully\");\n        const data = JSON.parse(response.data);\n\n        \/\/ Access the articles array in the response data\n        const articles = data.articles;\n       console.log(articles)\n\n        \/\/ Create a formatted string of titles, descriptions, and content\n        let newsContent = articles.map(article => {\n            const title = `Title: ${article.title}`;\n            const description = `Description: ${article.description}`;\n            const content = `Content: ${article.content ? article.content.replace(\/<[^>]+>\/g, '') : ''}`;\n            \/\/return `${title}\\n${description}\\n${content}\\n-------------\\n`;\n              return `${title}\\n-------------\\n`;\n        }).join('\\n');\n\n        return newsContent; \/\/ Return the formatted string\n    } catch (error) {\n        console.log(\"Error fetching page content:\", error.message);\n        return \"Error fetching page content.\";\n    }\n}",
+    "description" : "Get the news for a given topic, for the time frame between from and to, sorted as requested "
+  },
+  "isEnabled" : true
+}

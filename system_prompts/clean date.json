@@ -1,0 +1,5 @@
+{
+  "title" : "clean date",
+  "prompt" : "Extract the date only in YYYY-MM-DD",
+  "isEnabled" : false
+}

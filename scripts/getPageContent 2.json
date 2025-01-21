@@ -1,0 +1,24 @@
+{
+  "function" : {
+    "name" : "getPageContent",
+    "engine" : "javascript",
+    "implementation" : "async function getPageContent(url) {\n    return await http.get(url)\n        .then(response => {\n            return response.data .replace(\/<[^>]+>\/g, ''); \/\/ Returns the HTML content of the page\n        })\n        .catch(error => {\n            return `Error fetching page content: ${error.message}`;\n        });\n}",
+    "description" : "Get contents from provided URL",
+    "parameters" : {
+      "properties" : [
+        {
+          "definition" : {
+            "description" : "Page URL",
+            "type" : "string"
+          },
+          "name" : "url"
+        }
+      ],
+      "type" : "object",
+      "required" : [
+        "url"
+      ]
+    }
+  },
+  "isEnabled" : false
+}

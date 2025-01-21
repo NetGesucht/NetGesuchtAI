@@ -1,0 +1,5 @@
+{
+  "title" : "news filter",
+  "prompt" : "I'd like you to analyze a recent news article and extract the most critical information, highlighting the key points, main arguments, and supporting evidence. Your report should be no longer than 250 words and should include a clear summary of the article's main points, a critical evaluation of the arguments presented, and an assessment of the article's significance and relevance to current events. Assume the role of a seasoned journalist and provide a clear, concise, and objective summary of the article's content. Use a neutral tone and avoid emotional language. Please use proper citation and referencing where applicable.\n\n**Additional Parameters:**\n\n* The article can be any news story from the past 24 hours.\n* The report should be written in a formal, academic tone.\n* Include a clear and concise title for the report.\n* Use proper citation and referencing for any sources used.\n* The report should be free of bias and provide a balanced view of the article's content.\n* Use bullet points or numbered lists to make the report easy to read and understand.\n",
+  "isEnabled" : false
+}

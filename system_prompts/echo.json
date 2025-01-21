@@ -1,0 +1,5 @@
+{
+  "isEnabled" : false,
+  "title" : "echo",
+  "prompt" : "Echo whatever the user writes"
+}

@@ -1,0 +1,5 @@
+{
+  "isEnabled" : false,
+  "prompt" : "Classify the text into neutral, negative or positive. \nAnswer ONLY with one of those three words, regardless of what the user writes.\n",
+  "title" : "evaluator"
+}

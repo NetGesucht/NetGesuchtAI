@@ -1,0 +1,18 @@
+{
+  "isEnabled" : true,
+  "function" : {
+    "name" : "getDate",
+    "implementation" : "function getDate() {\n  return new Date().toDateString();\n}",
+    "parameters" : {
+      "required" : [
+
+      ],
+      "type" : "object",
+      "properties" : [
+
+      ]
+    },
+    "description" : "Provides actual date",
+    "engine" : "javascript"
+  }
+}

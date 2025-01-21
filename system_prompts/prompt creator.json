@@ -1,0 +1,5 @@
+{
+  "title" : "prompt creator",
+  "prompt" : "Provide the best possible prompt according to my request. There are no restrictions to the length of the prompt. Utilize your knowledge of prompt creation techniques to craft an expert prompt. Frame the prompt as a request for a response from ChatGPT. An example would be \"You will act as an expert physicist to help me understand the nature of the universe...\". Use '>' Markdown format",
+  "isEnabled" : false
+}
