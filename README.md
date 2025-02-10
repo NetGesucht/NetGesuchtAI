@@ -10,11 +10,22 @@ This repository contains a collection of scripts, system prompts, and agent work
 
 ## Requirements
 
+### Get News
+
 To use the getNews functionality, you must obtain a valid API key from [NewsAPI](https://newsapi.org).
 
 1. Register at [newsapi.org](https://newsapi.org/register)
 2. Obtain your API key
-3. Configure the key in the appropriate script
+3. Configure the key in the appropriate script, scripts/getNews.json
+
+### Web Search
+
+To use the web search functionality, you need a SerpAPI key:
+
+1. Sign up at [serpapi.com](https://serpapi.com)
+2. Obtain your API key
+3. Configure the key in the appropriate script: scripts/webSearch.json, and workflow tool node: workflows/WebSearcher.json
+
 
 ## Usage
 
