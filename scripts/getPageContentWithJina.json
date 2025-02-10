@@ -1,0 +1,24 @@
+{
+  "isEnabled" : true,
+  "function" : {
+    "description" : "Get web page content using Jina",
+    "name" : "getPageContentWithJina",
+    "parameters" : {
+      "type" : "object",
+      "required" : [
+        "url"
+      ],
+      "properties" : [
+        {
+          "name" : "url",
+          "definition" : {
+            "type" : "string",
+            "description" : "Page URL"
+          }
+        }
+      ]
+    },
+    "engine" : "javascript",
+    "implementation" : "\/\/ https:\/\/r.jina.ai\/http:\/\/www.netgesucht.com\/ai.html\n\nasync function getPageContentWithJina(url) {\n    return await http.get(`https:\/\/r.jina.ai\/${url}`)\n        .then(response => {\n            return response.data;\n        })\n        .catch(error => {\n            return `Error fetching page content: ${error.message}`;\n        });\n}"
+  }
+}
