@@ -1,0 +1,32 @@
+{
+  "function" : {
+    "engine" : "javascript",
+    "implementation" : "function replaceSpacesWithPlus(string) {\n  return string.replace(\/ \/g, '+');\n}\n\nasync function webSearch_for_workflows(q, apiKey) {\n    const url = `https:\/\/serpapi.com\/search.json?q=${replaceSpacesWithPlus(q)}&api_key=${apiKey}`;\n\n    try {\n        console.log(url)\n        const response = await http.get(url);\n        console.log(\"Page Content Retrieved Successfully\");\n        console.log(response);\n\n        const organic_results = JSON.parse(response.data).organic_results;\n        console.log(organic_results)\n\n        \/\/ Create a formatted string of titles, descriptions, and content\n        let newsContent = organic_results.map(item => {\n            const title = `Title: ${item.title}`;\n            const link = `Link: ${item.link}`;\n            const snippet = `Snippet: ${item.snippet ? item.snippet.replace(\/<[^>]+>\/g, '') : ''}`;\n            return `${title}\\n${link}\\n${snippet}\\n-------------\\n`;\n        }).join('\\n');\n\n        return newsContent; \/\/ Return the formatted string\n    } catch (error) {\n        console.log(\"Error fetching page content:\", error.message);\n        return \"Error fetching page content.\";\n    }\n}",
+    "parameters" : {
+      "properties" : [
+        {
+          "name" : "q",
+          "definition" : {
+            "type" : "string",
+            "description" : "What to search for"
+          }
+        },
+        {
+          "definition" : {
+            "type" : "string",
+            "description" : "SerpAPI Key"
+          },
+          "name" : "apiKey"
+        }
+      ],
+      "required" : [
+        "q",
+        "apiKey"
+      ],
+      "type" : "object"
+    },
+    "name" : "webSearch_for_workflows",
+    "description" : "Get the web search results for a given query"
+  },
+  "isEnabled" : true
+}
