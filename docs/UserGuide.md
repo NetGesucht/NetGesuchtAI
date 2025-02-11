@@ -3,11 +3,39 @@
 
 ## Chat (Conversations)
 
+![image](images/chat.png)
+
 ### Selecting Model to Download and Activate
+
+Press to show the menu
+
+![image](images/select_model_popup.png)
+
+A list with the available models will show up.
+
+Depending on the amount of memory available it will enable selecting and downloading the model that will fit in the available memory, the others will be grayed out.
+
+The actually selected model have a checkmark.
+
+Downloaded models are marked with an arrow pointing down.
+
+![image](images/select_model.png)
+
+When selected a model that has not been downloaded yet, it will prompt the user to download the model.
+
+![image](images/select_model_download.png)
 
 ### Save Conversation
 
-### Delete Conversation
+Conversations are not automatically saved, they need to be explicitely saved and a name has to be assigned.
+
+![image](images/conversation_save.png)
+
+### Clean Conversation
+
+The conversation canvas can be cleaned up.
+
+![image](images/conversation_delete.png)
 
 ## Configuration
 
@@ -25,7 +53,7 @@ IP Address: use this address to connect to the device when the API Server has be
 
 #### Function Calling
 
-When enable, use the model Llama 3.2 3B, it is the only model with robust function calling support. 
+When enabled, use the model Llama 3.2 3B, it is the only model with robust function calling support. 
 
 It is not perfect, it depened on the prompt and the script name, description and arguments description.
 
