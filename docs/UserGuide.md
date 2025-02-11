@@ -104,6 +104,10 @@ These models could be deleted by swiping to the left.
 
 ### Saved Conversations
 
+Here are located the conversations saved in the Chat view, which can be removed by sliding to the left and pressing the red trash icon.
+
+![image](images/saved_conversations.png)
+
 ### System Prompts
 
 The script name and the function name *must* be the same.
