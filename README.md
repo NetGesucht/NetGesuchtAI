@@ -36,3 +36,7 @@ Important: When importing components, always import scripts and system prompts B
 ## Contributing
 
 Send Pull Requests (PRs) with your contributions.
+
+## Documentation 
+
+For User Guide [Documentation](docs/UserGuide.md)
